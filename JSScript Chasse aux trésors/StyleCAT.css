@@ -1,0 +1,180 @@
+.ObjDescription {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(41, 25, 5);
+    /* pour avoir du texte/contenu au milieu verticallement et horizontallement, il faut display: flex; (Change la manière d'affichage) align-items: center; (Centre verticallement) et justify-content: center; (Centre Horizontallement) */
+}
+
+.ObjDescriptionImg {
+    position: absolute;
+    border: solid rgb(49, 49, 49);
+}
+
+.Pancarte {
+    position: absolute;
+    top: 0px;
+    z-index: 11;
+}
+
+.MapBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    overflow: hidden;
+}
+
+.PlayerGuiBackground {
+    position: absolute;
+}
+
+.ItemInv {
+    position: absolute;
+}
+
+.Hearts {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Heart {
+    display: inline-block;
+}
+
+.GuiButtons {
+    position: absolute;
+}
+
+.RepairButton:hover {
+    filter: brightness(90%);
+}
+
+.DarkenBody {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+    /*Permet de ne pas prendre en compte les evenements de la souris, pratique dans ce cas car sinon les boutons comme ReprairButton ne seront pas accessible du fait que DarkenBody a un z-index plus grand*/
+    pointer-events: none;
+}
+
+.EventMessage {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.PopUpParent {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.PopUpFrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PopUpFrameAnim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: PopUpAnim 10s ease-out;
+}
+
+@keyframes PopUpAnim {
+
+    5% {
+        transform: translateY(-200%);
+    }
+
+    95% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+.DeathTransitionFrame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.DeathTransitionFrameAnim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    animation: DeathScreenAppear 3s ease-in-out;
+}
+
+@keyframes DeathScreenAppear {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+
+.CalendarBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CalendarBackgroundAnim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: CalendarFall 2s cubic-bezier(0.71,-0.12, 1, 1);
+}
+
+.CalendarBackgroundNextDay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes CalendarFall {
+
+    10% {
+        transform: rotateZ(-5deg);
+    }
+
+    100% {
+        transform: translateY(500%) rotateZ(90deg)
+    }
+}
+
+.StartupScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

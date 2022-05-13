@@ -1,0 +1,37 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuFrame {
+    aspect-ratio: 1 / 1;
+    width: 30%;
+    border: solid black 0.2vw;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.TitreMenu {
+    font-size: 3vw;
+    border: solid black 0.2vw;
+    border-radius: 3vw;
+    padding: 0.5vw;
+    margin-bottom: 0.5vh;
+}
+
+.ReplayButton {
+    font-size: 1.5vw;
+    border: solid black 0.2vw;
+    border-radius: 3vw;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chasse aux trésors</title>
+        <link rel="stylesheet" href="StyleCAT.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+        <style>
+            .ObjDescription, .RepairAmount, .GoldAmount, .EquipageAmount, .EventMessage, .FightKraken, .SurrenderKraken, .PopUpFrame, 
+            .YesChangeMap, .NoChangeMap, .YesExploreIsland, .NoExploreIsland {
+                font-family: "Pirata One", sans-serif;
+            }
+            
+            .CalendarBackground {
+                font-family: "VT323", sans-serif;
+            }
+
+            .CalendarBackgroundAnim {
+                font-family: "VT323", sans-serif;
+            }
+            
+            .CalendarBackgroundNextDay {
+                font-family: "VT323", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="StartupScreen" id="StartupScreen">
+            <div class="PressAnyToStart" id="PressAnyToStart"></div>
+        </div>
+
+        <div class="DeathTransitionFrame" id="DeathTransitionFrame"></div>
+
+        <div class="PopUpParent" id="PopUpParent">
+            <div class="PopUpFrame" id="PopUpFrame"> </div>
+        </div>
+
+        <div class="DarkenBody" id="DarkenBody">
+            <div class="EventWindow" id="EventWindow">
+                <div class="EventMessage" id="EventMessage"> </div>
+
+                <input type="button" class="FightKraken" id="FightKraken" value="Combattre.. !">
+                <input type="button" class="SurrenderKraken" id="SurrenderKraken" value="Fuire..">
+
+                <input type="button" class="YesChangeMap" id="YesChangeMap" value="Changer">
+                <input type="button" class="NoChangeMap" id="NoChangeMap" value="Rester">
+
+                <input type="button" class="YesExploreIsland" id="YesExploreIsland" value="Explorer">
+                <input type="button" class="NoExploreIsland" id="NoExploreIsland" value="Ne pas explorer">
+            </div>
+        </div>
+
+        <div id="CalendarBackground" class="CalendarBackground"> J1 </div>
+        <div id="CalendarBackgroundNextDay" class="CalendarBackgroundNextDay">  </div>
+
+        <div class="Pancarte" id="Pancarte" style="background-image: url(iconesNimages/Pancarte.png);">
+            <div class="ObjDescription" id="ObjDescription"> </div>
+            <div class="ObjDescriptionImg" id="ObjDescriptionImg"> </div>
+        </div>
+
+        <div class="PlayerGuiBackground" id="PlayerGuiBackground" style="background-image: url(iconesNimages/PlayerGuiBackground.png);">
+            <div class="Hearts" id="Hearts">
+                <div class="Heart" id="Heart1"></div>
+                <div class="Heart" id="Heart2"></div>
+                <div class="Heart" id="Heart3"></div>
+                <div class="Heart" id="Heart4"></div>
+                <div class="Heart" id="Heart5"></div>
+            </div>
+
+            <div class="GuiButtons" id="GuiButtons">
+                <div class="RepairAmount" id="RepairAmount"> 0 </div>
+                <input type="button" id="RepairButton" class="RepairButton">
+            </div>
+
+            <div class="ItemInv" id="ItemInv">
+                <div class="GoldAmount" id="GoldAmount"> 0 </div>
+                <div class="GoldIcon" id="GoldIcon"></div>
+
+                <div class="EquipageAmount" id="EquipageAmount"> 0 </div>
+                <div class="EquipageIcon" id="EquipageIcon"></div>
+            </div>
+        </div>
+
+        <div id="MapBackground" class="MapBackground">
+            <div id="carte" style="border: dashed black 2px ;display: inline-block; line-height: 1px;"> </div>
+        </div>
+
+        <div id="PlayerContainer"> </div>
+    
+
+        <script src="JSScriptCAT.JS"></script>
+    </body>
+</html>
